@@ -1,0 +1,68 @@
+---
+title: "Evlenme ve Boşanma Üzerine Çıkarımsal Analiz"
+author: 
+  - Abdül Aydıntepe [numara]
+bibliography: ../bibliography/biblio.bib
+csl: ../csl/apa-tr.csl
+header-includes:
+  - \usepackage{polyglossia}
+  - \setmainlanguage{turkish}
+  - \usepackage{booktabs}
+  - \usepackage{caption} 
+  - \captionsetup[table]{skip=10pt}
+output:
+  bookdown::pdf_document2:
+    fig_caption: yes
+    fig_height: 3
+    fig_width: 4
+    keep_tex: no
+    latex_engine: xelatex
+    number_sections: yes
+    toc: no
+geometry: margin=1in
+link-citations: yes
+urlcolor: blue
+fontsize: 12pt
+biblio-style: apalike
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(cache = FALSE, echo = TRUE, message = FALSE, warning = FALSE)
+```
+
+<!-- ======================================================================= -->
+<!-- ============================== NOTLAR ================================= -->
+<!-- ======================================================================= -->
+[Github Repo](https://github.com/yasemintutarr/istatistikk2odev)
+
+## Giriş
+Karşılıklı etkileşen, evlilik ve aileyi ilgilendiren konularda fikir birliği yapabilen ve sorunlarını olumlu bir şekilde çözebilen çiftlerin evliliği uyumlu bir evlilik olarak tanımlanır. Dolayısıyla; mutluluk, doyum ve beklentilerin gerçekleşmesi, evlilikte karşılıklı uyum ile mümkündür. Bu nedenle klinisyenler kadar araştırmacılar da evlilik kalitesi ve evlilik uyumunun araştırılmasına giderek artan bir ilgi duymaya başlamışlardır.
+Evlilik ilişkilerini içeren aile, toplumdaki değişimlerden en fazla
+etkilenen kurumlardan biridir. Ekonomik gelişmeler, artan eğitim düzeyi ve kadının giderek daha fazla çalışma dünyasına girmesi gibi birçok faktör önemli toplumsal değişimler arasmda sayılabilir. Bu değişimlere olan duyarlılığı nedeniyle evlilik ilişkilerinin düzenli olarak incelenmesi önemli gözükmektedir. Bu amaçla, bu çalışmada demografik değişkenlerle, evlenme ve boşanma ilişkileri incelenmiştir.
+    Bu veri setinde aşağıdaki değişkenler bulunmaktadır;
+  
+ *  **İller**
+ *  **2022 İllere Göre Evlenme Sayısı**
+ *  **2022 Akraba Evliliği Sayısı** 
+ *  **2022 Akraba Evliliği Oranı (%)**
+ *  **2022 Erkek Ortalama İlk Evlenme Yaşı**
+ *  **2022 Kadın Ortalama İlk Evlenme Yaşı**
+ *  **2022 Kaba Evlenme Hızı:**  *Bin nüfus başına düşen evlenme sayısını ifade eder.*
+ *  **2022 Boşanma Sayısı**
+ *  **2022 Kaba Boşanma Hızı:** *Bin nüfus başına düşen boşanma sayısını ifade eder.*
+ *  **2022 İllere Göre Toplam Evli Nüfus**
+ 
+
+## Çalışmanın Amacı
+ Geçmişte, şuanda ve gelecekte aile daima bir kurumdur. Aileyi oluşturan evlenme terimi ve sonlandıran boşanma terimleri tarih boyunca önemli olacaklardır. Aileyi sonlandıran etmenlerin veya dolaylı yoldan neden olan etmenlerin araştırılması ve önlemler alınarak önüne geçilmesi önem arz etmektedir. Etmenlerden faydalanarak çıkarımsal analiz ile tespit ve yöntem bulabiliriz.
+
+## Literatür 
+Evlilik sorunlarının, boşanma oranlarının ve bunlara bağlı olarak psikolojik yardım alma talebinde bulunanların tüm dünyada olduğu gibi Türkiye’de de giderek yaygınlaşması, evlilik ilişkisinin farklı boyutlarıyla incelenmesini ihtiyaç haline getirmektedir. Evlilik, aile ilişkisinin kurulduğu ve bir sonraki neslin yetiştirildiği bir kurum olduğundan, en temel ve en önemli insan ilişkisi olarak tanımlanmaktadır.[@soylu2015evlilik]
+Modern toplumda yaşanan değişmenin etkisiyle, refah toplumu olarak adlandırılan sanayileşmiş ülkelerde evlenme oranları düşerken, boşanma oranları artmakta, aynı zamanda yalnız yaşama veya nikahsız beraberlikleri kapsayan alternatif hayat tarzları ortaya çıkmaktadır. [@stevenson2007marriage] Evlilik pek çok ülkede olduğu gibi Türkiye'de de aile birliğinin kurulmasının yanında ekonomik, toplumsal ve demografik faaliyetlerin yürütülmesi açısından önemli bir durumdur. Türkiye, evlilik dinamikleri bakımından oldukça hızlı değişimlerin yaşandığı bir ülkedir. Türkiye'de evlilikler; bölgesel anlamda, gelir düzeyi, kültürel yapısı, eğitim durumu ve diğer değişkenlere bağlı olarak farklılaşıp şekillenmektedir. [@erbek2005evlilik] Evlenme ve boşanma olgularının doğurganlık etkisi de bir hayli önemlidir. Türkiye'de boşanmalar çok yaygın olmamakla beraber son yıllarda artma eğiliminde olması sebebiyle ilgi çekici bir konu haline gelmeye başlamıştır. Boşanmaların özeliklerle son yıllarda artmaya başlamış olması ve boşanma oranları bakımından bölgeler arasında ciddi farkların olması ve boşanma nedenlerinin ortaya konulması bakımından önemlidir. [@allen1992marriage]
+Günümüzde Türk ailesini kuşatan sorunlara bakıldığında, nedenleri ve sonuçları açısından ilk sıralarda boşanma olgusunun yer almaya başladığı gözlenmektedir. Türkiye'de son 20 yıla kadar boşanma olgusunun önemli bir toplumsal sorun olarak algılanmamaktaydı. Özellikle 20. yüzyılın sonlarına kadar ülkemizde güçlü aile bağlarının ve dini inançların etkisiyle toplumda boşanmış bireylere özellikle de kadına karşı önyargılı ve damgalayıcı tutumların olması, kadının ekonomik bağımsızlığının olmaması, ailede sorunların çözümlendiği bir dinamik yapının olması vb. faktörler [@aydin2010toplumsal] sebebiyle boşanma olgusu toplumsal bir sorun oluşturmamaktaydı. Bugün diğer toplumlarda olduğu gibi Türkiye’de de temel değerlerin zaafa uğraması, nüfusun kentlerde toplanması, günlük hayatın karmaşıklaşması, iletişim teknolojilerinin ve kitle iletişim araçlarının yaygınlığı, tüketim kültürünün değişmesi, bireysel değerlerin ön plana çıkması ile birlikte toplumların temel taşı olan aileyi yıkıma götüren aile içi şiddet ve boşanma olgusu birey, toplum ve hukuk açısından gitgide daha önemli bir olgu haline gelmiştir. Buna paralel olarak yaşanılan yüzyılın ''stres çağı'' olarak nitelendirilmesine neden olan bireysel stres kaynaklarının artmasıyla birlikte tahammülsüz bireylerin yetişmesi, sürekli tüketimi hedef alan tüketim tutkusu, ailelerin sorumsuz bireyler yetiştirme tarzı, medyanın ürettiği değer kargaşası ile birlikte oluşan ahlaki yozlaşma, evlilikte maddi değerler üzerine oluşturulmak istenen hayat tarzı vb. faktörler boşanmaya giden yolda mayınlar olarak değerlendirilebilir.[@bacskaya2017turkiye]
+
+
+
+\newpage
+# Kaynakça {#references}
+<div id="refs"></div>
+
